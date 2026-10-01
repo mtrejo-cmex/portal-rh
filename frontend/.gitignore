@@ -22,3 +22,16 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Entornos virtuales
+backend/venv/
+backend/.venv/
+backend/portal_rh/
+venv/
+.venv/
+env/
+
+# Archivos compilados y temporales de Python
+__pycache__/
+*.py[cod]
+*$py.class
