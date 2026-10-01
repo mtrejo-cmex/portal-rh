@@ -1,0 +1,17 @@
+/* Reset básico para la aplicación */
+* {
+  box-sizing: border-border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}

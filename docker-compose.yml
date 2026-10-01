@@ -1,0 +1,24 @@
+services:
+  backend:
+    build: ./backend
+    container_name: portal_rh_backend
+    ports:
+      - "8001:8001"
+    env_file:
+      - ./backend/.env
+      - ./backend/.env.empleados
+    volumes:
+      - ./backend/uploads:/app/uploads
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        - VITE_API_URL=http://192.168.3.59:8002
+    container_name: portal_rh_frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: always
